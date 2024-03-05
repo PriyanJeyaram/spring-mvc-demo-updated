@@ -1,4 +1,5 @@
-<%--
+<%@ page import="com.bootcamp.springmvcdemoupdated.model.Product" %>
+<%@ page import="java.util.List" %><%--
   Created by IntelliJ IDEA.
   User: prijeyar
   Date: 29-02-2024
@@ -7,10 +8,14 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
-  <head>
-    <title>$Title$</title>
-  </head>
-  <body>
-  $END$
-  </body>
+<head>
+    <title>HOME</title>
+</head>
+<body>
+<h1>Hello Java</h1>
+<p>Welcome to the world :)</p>
+<hr>
+<% List<Product> productList=(List<Product>)request.getAttribute("productList");%>
+<%= productList.get(0).getProductName()%>
+</body>
 </html>
